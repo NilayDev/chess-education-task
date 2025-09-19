@@ -24,3 +24,43 @@ body {
   color: var(--foreground);
   font-family: "Radio Canada", sans-serif;
 }
+
+.timeline-wrapper::after {
+  content: "";
+  position: absolute;
+  top: auto;
+  left: auto;
+  width: 50%;
+  bottom: 0;
+  height: 115px;
+  background: #fff;
+  pointer-events: none;
+  z-index: 0;
+  margin: auto;
+  right: auto;
+}
+
+.timeline-wrapper::before {
+  content: "";
+  position: absolute;
+  top: auto;
+  left: -78px;
+  width: 100%;
+  bottom: -141px;
+  height: 166px;
+  pointer-events: none;
+  background-image: url("./../../public/first-half.svg");
+  background-size: contain;
+  background-position: center 30px;
+  background-repeat: no-repeat;
+  z-index: 0;
+  transform: rotate(190deg);
+}
+
+.timeline-item:nth-child(2n + 2) {
+  margin-left: 300px;
+}
+
+.timeline-item:nth-child(4n) {
+  margin-left: -300px;
+}
